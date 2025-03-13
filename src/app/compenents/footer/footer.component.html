@@ -1,0 +1,65 @@
+<footer class="footer mt-auto py-3 bg-dark text-white">
+  <div class="container-fluid">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Sol blok - Linkler -->
+      <div class="col text-center text-md-start">
+        <h5 class="mb-3">Hızlı Linkler</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#" class="text-white">Ana Sayfa</a></li>
+          <li class="mb-2"><a href="#" class="text-white">Hakkımızda</a></li>
+          <li class="mb-2"><a href="#" class="text-white">Hizmetlerimiz</a></li>
+          <li class="mb-2"><a href="#" class="text-white">İletişim</a></li>
+        </ul>
+      </div>
+
+      <!-- Orta blok - Metin ve Resim -->
+      <div class="col text-center d-flex flex-column justify-content-between">
+        <div>
+          <h5 class="mb-3">Bizi Takip Edin</h5>
+          <p>
+            En güncel haberler ve duyurular için sosyal medya hesaplarımızı
+            takip edin.
+          </p>
+        </div>
+        <div class="logo-container">
+          <img
+            [src]="logo()"
+            alt="Logo"
+            class="img-fluid mb-2"
+            style="max-width: 120px"
+          />
+        </div>
+      </div>
+
+      <!-- Sağ blok - Linkler -->
+      <div class="col text-center text-md-end">
+        <h5 class="mb-3">Önemli Bağlantılar</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a href="{{ footerLink() }}" class="text-white"
+              >Gizlilik Politikası</a
+            >
+          </li>
+          <li class="mb-2">
+            <a href="{{ footerLink() }}" class="text-white"
+              >Kullanım Şartları</a
+            >
+          </li>
+          <li class="mb-2">
+            <a href="#" class="text-white">Sıkça Sorulan Sorular</a>
+          </li>
+          <li class="mb-2"><a href="#" class="text-white">Destek</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-12 text-center">
+        <hr class="bg-secondary" />
+        <p class="mb-0">
+          &copy; 2025 İlk Angular Uygulamamız. Tüm hakları saklıdır.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

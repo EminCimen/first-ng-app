@@ -1,0 +1,82 @@
+<div class="login-container">
+  <div class="card">
+    <div class="card-header">
+      <h2>Giriş Yap</h2>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="username">Kullanıcı Adı</label>
+          <input
+            type="text"
+            id="username"
+            formControlName="username"
+            class="form-control"
+            [class.is-invalid]="
+              loginForm.get('username')?.invalid &&
+              loginForm.get('username')?.touched
+            "
+          />
+          <div
+            class="invalid-feedback"
+            *ngIf="
+              loginForm.get('username')?.invalid &&
+              loginForm.get('username')?.touched
+            "
+          >
+            Kullanıcı adı gerekli
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Şifre</label>
+          <input
+            type="password"
+            id="password"
+            formControlName="password"
+            class="form-control"
+            [class.is-invalid]="
+              loginForm.get('password')?.invalid &&
+              loginForm.get('password')?.touched
+            "
+          />
+          <div
+            class="invalid-feedback"
+            *ngIf="
+              loginForm.get('password')?.invalid &&
+              loginForm.get('password')?.touched
+            "
+          >
+            Şifre gerekli
+          </div>
+        </div>
+
+        <div class="alert alert-danger" *ngIf="errorMessage">
+          {{ errorMessage }}
+        </div>
+
+        <div class="form-group">
+          <button
+            type="submit"
+            class="btn btn-primary btn-block"
+            [disabled]="loginForm.invalid || isLoading"
+          >
+            <span
+              *ngIf="isLoading"
+              class="spinner-border spinner-border-sm mr-1"
+            ></span>
+            Giriş Yap
+          </button>
+        </div>
+
+        <p class="mt-3 text-center">
+          <small
+            >JSONPlaceholder API'deki herhangi bir kullanıcı adını
+            kullanabilirsiniz. Şifre alanını dilediğiniz gibi
+            doldurabilirsiniz.</small
+          >
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

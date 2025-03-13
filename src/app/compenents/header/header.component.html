@@ -1,0 +1,20 @@
+<header class="header">
+  <h1>Welcome to {{ title2() }}</h1>
+  <nav class="navbar">
+    <ul>
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/todos">Todos</a></li>
+      <li><a routerLink="/users">Users</a></li>
+      <li><a routerLink="/posts">Posts</a></li>
+      <ng-container *ngIf="authService.isLoggedIn()">
+        <li class="user-info">
+          <span>Merhaba, {{ authService.currentUser()?.username }}</span>
+          <a href="javascript:void(0)" (click)="logout()">Çıkış Yap</a>
+        </li>
+      </ng-container>
+      <ng-container *ngIf="!authService.isLoggedIn()">
+        <li class="login-link"><a routerLink="/login">Giriş Yap</a></li>
+      </ng-container>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,14 @@
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (post of posts(); track post.id) {
+    <app-post-item [post]="post" />
+    }
+  </tbody>
+</table>

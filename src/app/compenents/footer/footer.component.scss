@@ -1,0 +1,77 @@
+.footer {
+  position: relative;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      text-decoration: underline;
+      color: #17a2b8 !important;
+    }
+  }
+
+  img {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    width: 100%;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 200px;
+  }
+
+  h5 {
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background-color: #17a2b8;
+      margin-top: 8px;
+    }
+  }
+
+  .text-center h5:after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .text-md-end h5:after {
+    margin-left: auto;
+  }
+}
+
+// Mobil cihazlar için responsive düzenlemeler
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+
+    .col {
+      margin-bottom: 2rem;
+      min-height: auto;
+    }
+
+    h5:after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
