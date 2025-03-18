@@ -1,7 +1,38 @@
+.todos-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.search-box {
+  margin-bottom: 1rem;
+
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    }
+  }
+}
+
 .todos {
   &__item {
     display: flex;
     align-items: center;
     gap: 1rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f8f9fa;
+    }
   }
 }

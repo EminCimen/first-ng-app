@@ -27,4 +27,11 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./posts/posts.component').then((m) => m.PostsComponent),
   },
+  {
+    path: 'weather',
+    loadComponent: () =>
+      import('./compenents/weather/weather.component').then(
+        (m) => m.WeatherComponent
+      ),
+  },
 ];

@@ -6,6 +6,7 @@
       <li><a routerLink="/todos">Todos</a></li>
       <li><a routerLink="/users">Users</a></li>
       <li><a routerLink="/posts">Posts</a></li>
+      <li><a routerLink="/weather">Hava Durumu</a></li>
       <ng-container *ngIf="authService.isLoggedIn()">
         <li class="user-info">
           <span>Merhaba, {{ authService.currentUser()?.username }}</span>

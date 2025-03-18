@@ -1,8 +1,27 @@
-<ul class="todos">
-  @for (todo of todoItems(); track todo.id) {
-  <li class="todos__item">
-    <input id="todo-{{ todo.id }}" type="checkbox" [checked]="todo.completed" />
-    <label for="todo-{{ todo.id }}">{{ todo.title }}</label>
-  </li>
-  }
-</ul>
+<div class="todos-container">
+  <div class="search-box">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Todo ara..."
+      (input)="onSearch($event)"
+    />
+  </div>
+  <ul class="todos">
+    @for (todo of todoItems() | search:searchText(); track todo.id) {
+    <li
+      appHighlightCompletedTodo
+      [isCompleted]="todo.completed"
+      class="todos__item"
+      (click)="todoClicked(todo)"
+    >
+      <input
+        id="todo-{{ todo.id }}"
+        type="checkbox"
+        [checked]="todo.completed"
+      />
+      <label for="todo-{{ todo.id }}">{{ todo.title }}</label>
+    </li>
+    }
+  </ul>
+</div>
