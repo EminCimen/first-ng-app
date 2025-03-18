@@ -8,7 +8,7 @@ import { Observable, catchError, of } from 'rxjs';
 })
 export class WeatherService {
   private http = inject(HttpClient);
-  private apiKey = '7a6271282d1ad69add8cdd2fe9f93955';
+  private apiKey = '#API_KEY_HERE#';
   private apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
   getWeather(city: string): Observable<WeatherResponse> {
